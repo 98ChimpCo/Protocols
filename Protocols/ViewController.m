@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.ali = [AliBoss new];
+    self.shahin = [ShahinBarrista new];
+    self.elham = [ElhamAssistant new];
+    
+    self.ali.delegate1 = self.shahin;
+    self.ali.delegate2 = self.elham;
+    
+    [self checkTimeForCoffee];
 }
 
 
@@ -25,5 +33,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)checkTimeForCoffee
+{
+    if (time == 10)
+    {
+        [self.ali.delegate1 bringCoffee];
+    }
+}
 
 @end

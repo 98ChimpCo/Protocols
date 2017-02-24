@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AliBoss.h"
+#import "ShahinBarrista.h"
+#import "ElhamAssistant.h"
 
 @interface ViewController : UIViewController
 
+@property AliBoss *ali;
+@property ShahinBarrista *shahin;
+@property ElhamAssistant *elham;
 
 @end
 
